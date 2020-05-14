@@ -1,12 +1,11 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default class DocumentsDocumentRoute extends Route {
+  @service content;
 
   async model(params) {
-    return {
-      id: params.document_id,
-      title: 'this is the document title'
-    }
+    return this.content.fetchDocument(params.document_id);
   }
 
 }
