@@ -1,12 +1,11 @@
 import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
 
 export default class DatasetsDatasetRoute extends Route {
+  @service content;
 
   async model(params) {
-    return {
-      id: params.dataset_id,
-      title: 'this is the dataset title'
-    }
+    return this.content.fetchDataset(params.dataset_id);
   }
 
 }
