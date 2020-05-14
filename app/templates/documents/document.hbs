@@ -1,4 +1,4 @@
-<h2>DOCUMENT ROUTE</h2>
+<h2>DOCUMENT TEMPLATE</h2>
 
 <dl>
     <dt>id:</dt>
@@ -6,3 +6,5 @@
     <dt>title:</dt>
     <dd>{{this.model.title}}</dd>
 </dl>
+
+<LinkTo @route="documents.document.edit-engine" @model={{this.model.id}}>edit</LinkTo>

@@ -1,4 +1,4 @@
-<h2>DATASET ROUTE</h2>
+<h2>DATASET TEMPLATE</h2>
 
 <dl>
     <dt>id:</dt>
@@ -7,4 +7,4 @@
     <dd>{{this.model.title}}</dd>
 </dl>
 
-{{outlet}}
+<LinkTo @route="datasets.dataset.edit-engine" @model={{this.model.id}}>edit</LinkTo>
